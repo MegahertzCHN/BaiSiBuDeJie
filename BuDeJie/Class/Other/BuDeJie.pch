@@ -1,0 +1,55 @@
+//
+//  BuDeJie.pch
+//  BuDeJie
+//
+//  Created by 赵鹤 on 2016/10/8.
+//  Copyright © 2016年 SL. All rights reserved.
+//
+/*
+    pch步骤:1.提前编译头文件(/Users/zhaohe/Desktop/Personal/Personal_Learn/iOS_File/OC_File/06-OC项目/Day-01/03-环境部署/BuDeJie/BuDeJie/Class/Other/BuDeJie.pch   -->>   BuDeJie/Class/Other/BuDeJie.pch buildsetting 搜索 prefix)
+ 
+ 
+    1.存放公用的宏
+    2.存放公用的头文件
+    3.自定义Log
+ 
+ */
+
+
+
+#import "UIView+Frame.h"
+#import "UIBarButtonItem+Item.h"
+#import "SLConst.h"
+#import "UIImage+Image.h"
+#import "UIImageView+Download.h"
+
+/**************屏幕适配******************/
+#define SLScreenW [UIScreen mainScreen].bounds.size.width
+#define SLScreenH [UIScreen mainScreen].bounds.size.height
+#define iPhone6p (SLScreenH == 736)
+#define iPhone6 (SLScreenH == 667)
+#define iPhone5 (SLScreenH == 568)
+#define iPhone4 (SLScreenH == 480)
+/**************屏幕适配******************/
+
+#define ZHAFNWriteToPlist(fileName) [responseObject writeToFile:[NSString stringWithFormat:@"Users/zhaohe/Desktop/%@.plist", @#fileName] atomically:YES];
+
+
+#define ZHColor(r, g, b) [UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:1]
+#define ZHGrayColor(v) ZHColor(v, v, v)
+#define ZHRandomColor ZHColor(arc4random_uniform(255), arc4random_uniform(255), arc4random_uniform(255))
+
+
+#define ZHFunc ZHLog(@"%s",__func__)
+
+#ifdef DEBUG // 调试
+
+#define ZHLog(...) NSLog(__VA_ARGS__);
+
+#else // 发布
+
+#define ZHLog(...)
+
+#endif
+
+

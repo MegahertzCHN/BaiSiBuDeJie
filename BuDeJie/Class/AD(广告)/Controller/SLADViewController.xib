@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SLADViewController">
+            <connections>
+                <outlet property="containView" destination="Y6x-0c-kr0" id="iMA-0f-dZe"/>
+                <outlet property="jump" destination="NVg-4a-zjl" id="jpr-WK-sHe"/>
+                <outlet property="launchImageView" destination="fPk-k8-iox" id="9Gp-Vu-6u5"/>
+                <outlet property="view" destination="iN0-l3-epB" id="4VE-HO-6hZ"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fPk-k8-iox">
+                    <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Y6x-0c-kr0" userLabel="广告占位视图">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVg-4a-zjl">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.68089148116438358" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="跳过 (3)"/>
+                    <connections>
+                        <action selector="clickJump:" destination="-1" eventType="touchUpInside" id="3dE-qi-vNv"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="NVg-4a-zjl" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="8oz-jY-axe"/>
+                <constraint firstAttribute="trailing" secondItem="Y6x-0c-kr0" secondAttribute="trailing" id="BD2-h2-9gi"/>
+                <constraint firstItem="Y6x-0c-kr0" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Bio-nN-MBR"/>
+                <constraint firstAttribute="trailing" secondItem="fPk-k8-iox" secondAttribute="trailing" id="I9d-ls-Onm"/>
+                <constraint firstAttribute="bottom" secondItem="fPk-k8-iox" secondAttribute="bottom" id="WYI-FX-JWL"/>
+                <constraint firstAttribute="trailing" secondItem="NVg-4a-zjl" secondAttribute="trailing" constant="20" id="btg-ZO-CbQ"/>
+                <constraint firstAttribute="bottom" secondItem="Y6x-0c-kr0" secondAttribute="bottom" id="hzE-FB-QRS"/>
+                <constraint firstItem="fPk-k8-iox" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ipT-K5-4OT"/>
+                <constraint firstItem="fPk-k8-iox" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="ley-Mo-qgz"/>
+                <constraint firstItem="Y6x-0c-kr0" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="t1v-MZ-VEb"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

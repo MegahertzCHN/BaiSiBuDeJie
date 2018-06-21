@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SLLoginRegisterViewController">
+            <connections>
+                <outlet property="bottomView" destination="bYB-pc-dpG" id="RuB-uf-rEu"/>
+                <outlet property="leadCons" destination="fLb-Q7-mhR" id="YWP-NQ-NRU"/>
+                <outlet property="middleView" destination="grD-Ps-Gt3" id="4xz-g3-5jc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_register_background" translatesAutoresizingMaskIntoConstraints="NO" id="l0i-Ba-iOW"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LUh-P8-UBq" userLabel="Top">
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A51-Mz-xsj">
+                            <constraints>
+                                <constraint firstAttribute="height" constant="35" id="7n9-qS-vab"/>
+                                <constraint firstAttribute="width" constant="35" id="tYe-BM-1hl"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <state key="normal" image="login_close_icon"/>
+                            <connections>
+                                <action selector="close:" destination="-1" eventType="touchUpInside" id="hhQ-CI-PtT"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WDp-Vo-ZO2">
+                            <constraints>
+                                <constraint firstAttribute="width" constant="74" id="OMm-Ig-WYs"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
+                            <state key="normal" title="注册账号">
+                                <color key="titleColor" red="0.99999600648880005" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" title="已有账号?"/>
+                            <connections>
+                                <action selector="clickRegister:" destination="-1" eventType="touchUpInside" id="bDc-7l-jLB"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="Rfr-Th-ljp"/>
+                        <constraint firstItem="A51-Mz-xsj" firstAttribute="leading" secondItem="LUh-P8-UBq" secondAttribute="leading" constant="10" id="ZXq-oZ-jhb"/>
+                        <constraint firstAttribute="bottom" secondItem="WDp-Vo-ZO2" secondAttribute="bottom" id="eJb-0N-TZD"/>
+                        <constraint firstItem="WDp-Vo-ZO2" firstAttribute="top" secondItem="LUh-P8-UBq" secondAttribute="top" id="mbP-vu-9eU"/>
+                        <constraint firstItem="A51-Mz-xsj" firstAttribute="top" secondItem="LUh-P8-UBq" secondAttribute="top" id="myv-lZ-if6"/>
+                        <constraint firstAttribute="trailing" secondItem="WDp-Vo-ZO2" secondAttribute="trailing" constant="10" id="tZw-w5-upI"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="grD-Ps-Gt3" customClass="SLLoginRegisterView">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="Fxv-zp-8SA"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bYB-pc-dpG" userLabel="Bottom">
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="IKV-Z3-QJ9"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="LUh-P8-UBq" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="4SG-1S-eFX"/>
+                <constraint firstAttribute="trailing" secondItem="l0i-Ba-iOW" secondAttribute="trailing" id="8J3-Jc-JwQ"/>
+                <constraint firstItem="l0i-Ba-iOW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8ee-df-a5a"/>
+                <constraint firstAttribute="bottom" secondItem="l0i-Ba-iOW" secondAttribute="bottom" id="BJU-zX-o9H"/>
+                <constraint firstItem="bYB-pc-dpG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="EOi-fr-3eE"/>
+                <constraint firstAttribute="trailing" secondItem="bYB-pc-dpG" secondAttribute="trailing" id="Mqk-cL-rmg"/>
+                <constraint firstAttribute="bottom" secondItem="bYB-pc-dpG" secondAttribute="bottom" constant="20" id="Was-VE-sJ4"/>
+                <constraint firstItem="grD-Ps-Gt3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="fLb-Q7-mhR"/>
+                <constraint firstItem="LUh-P8-UBq" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="iNy-U2-IMd"/>
+                <constraint firstItem="grD-Ps-Gt3" firstAttribute="top" secondItem="LUh-P8-UBq" secondAttribute="bottom" constant="50" id="jQb-4Y-jvb"/>
+                <constraint firstItem="l0i-Ba-iOW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="rrf-cd-IaN"/>
+                <constraint firstAttribute="trailing" secondItem="LUh-P8-UBq" secondAttribute="trailing" id="suC-Uc-PTL"/>
+                <constraint firstItem="grD-Ps-Gt3" firstAttribute="width" secondItem="l0i-Ba-iOW" secondAttribute="width" multiplier="2" id="xYM-HX-JSf"/>
+            </constraints>
+            <point key="canvasLocation" x="22.5" y="-43.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="login_close_icon" width="16" height="16"/>
+        <image name="login_register_background" width="320" height="568"/>
+    </resources>
+</document>
